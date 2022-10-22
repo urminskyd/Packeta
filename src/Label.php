@@ -113,7 +113,7 @@ final class Label
         $pdf->Rotate(90, $sTextX, $sTextY);
         $pdf->SetFont($pdf->getFontFamily(), '', 29);
         $pdf->SetTextColor(150, 150, 150);
-        $pdf->Text($sTextX, $sTextY, 'Odesílatel');
+        $pdf->Text($sTextX, $sTextY, 'Odosielateľ');
         $pdf->SetTextColor(0, 0, 0);
         $pdf->StopTransform();
 
@@ -153,7 +153,7 @@ final class Label
         $pTextY = 100;
         $pdf->SetFont($pdf->getFontFamily(), '', 29);
         $pdf->SetTextColor(150, 150, 150);
-        $pdf->Text($pTextX, $pTextY, 'Příjemce');
+        $pdf->Text($pTextX, $pTextY, 'Príjemca');
         $pdf->SetTextColor(0, 0, 0);
 
         $pdf->SetFillColor(150, 150, 150);
@@ -239,7 +239,7 @@ final class Label
         $pdf->Rotate(90, $sTextX, $sTextY);
         $pdf->SetFont($pdf->getFontFamily(), '', 16);
         $pdf->SetTextColor(150, 150, 150);
-        $pdf->Text($sTextX, $sTextY, 'Odesílatel');
+        $pdf->Text($sTextX, $sTextY, 'Odosielateľ');
         $pdf->SetTextColor(0, 0, 0);
         $pdf->StopTransform();
         $pdf->SetFillColor(150, 150, 150);
@@ -317,7 +317,7 @@ final class Label
         // Prijemce
         $pdf->SetFont($pdf->getFontFamily(), '', 16);
         $pdf->SetTextColor(150, 150, 150);
-        $pdf->Text(75 + $xPositionOffset, 50 + $yPositionOffset, 'Příjemce:');
+        $pdf->Text(75 + $xPositionOffset, 50 + $yPositionOffset, 'Príjemca:');
         $pdf->SetTextColor(0, 0, 0);
 
         $pdf->SetFont($pdf->getFontFamily(), 'B', 22);
