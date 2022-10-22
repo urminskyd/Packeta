@@ -163,7 +163,25 @@ final class Label
         $pdf->SetDrawColor(0, 0, 0);
 
         $pdf->SetFont($pdf->getFontFamily(), 'B', 37);
-        $pdf->Text($pTextX - 3, $pTextY + 16, $packetAttributes->getName() . ' ' . $packetAttributes->getSurname());
+        $pdf->MultiCell(
+            120,
+            10,
+            $packetAttributes->getName() . ' ' . $packetAttributes->getSurname(),
+            0,
+            'C',
+            true,
+            0,
+            $pTextX - 3,
+            $pTextY + 16,
+            false,
+            0,
+            false,
+            true,
+            7,
+            'T',
+            true
+        );
+//        $pdf->Text($pTextX - 3, $pTextY + 16, $packetAttributes->getName() . ' ' . $packetAttributes->getSurname());
 
         $pdf->SetFillColor(0, 0, 0);
         $pdf->SetTextColor(255, 255, 255);
