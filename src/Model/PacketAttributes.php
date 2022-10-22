@@ -59,6 +59,8 @@ final class PacketAttributes implements IModel
         string $surname,
         float $value,
         int $addressId,
+        ?bool $normalize = false,
+        ?int $region = 420,
         ?int $id = null,
         ?string $company = null,
         ?string $email = null,
@@ -85,7 +87,7 @@ final class PacketAttributes implements IModel
         $this->setId($id);
         $this->setCompany($company);
         $this->setEmail($email);
-        $this->setPhone($phone);
+        $this->setPhone($phone, $region, $normalize);
         $this->setCurrency($currency);
         $this->setCod($cod);
         $this->setWeight($weight);
