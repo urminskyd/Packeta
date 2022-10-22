@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Salamek\Zasilkovna;
 
+
 class Tool
 {
     /**
@@ -11,10 +12,10 @@ class Tool
      * @param mixed $input
      * @return string
      */
-    public static function convertToString(mixed $input): string
+    public static function convertToString($input): string
     {
-        if (\is_array($input)) {
-            return \implode(', ', $input);
+        if (is_array($input)) {
+            return implode(', ', $input);
         }
 
         return (string) $input;
