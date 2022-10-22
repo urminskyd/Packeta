@@ -46,10 +46,10 @@ final class Label
 
         $pdf = new TCPDF('L', PDF_UNIT, 'A4', true, 'UTF-8', false);
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Adam Schubert');
-        $pdf->SetTitle(sprintf('Zasilkovna Label %s', implode(', ', $packageNumbers)));
-        $pdf->SetSubject(sprintf('Zasilkovna Label %s', implode(', ', $packageNumbers)));
-        $pdf->SetKeywords('Zasilkovna');
+        $pdf->SetAuthor('Eliadmin');
+        $pdf->SetTitle(sprintf('Eliadmin štítky %s', implode(', ', $packageNumbers)));
+        $pdf->SetSubject(sprintf('Eliadmin štítky %s', implode(', ', $packageNumbers)));
+        $pdf->SetKeywords('Packeta');
         $pdf->SetFont('freeserif');
         $pdf->setFontSubsetting(true);
         $pdf->setPrintHeader(false);
