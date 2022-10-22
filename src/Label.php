@@ -321,11 +321,30 @@ final class Label
         $pdf->SetTextColor(0, 0, 0);
 
         $pdf->SetFont($pdf->getFontFamily(), 'B', 22);
-        $pdf->Text(
+        $pdf->MultiCell(
+            70,
+            10,
+            $packetAttributes->getName() . ' ' . $packetAttributes->getSurname(),
+            0,
+            'C',
+            true,
+            0,
             73 + $xPositionOffset,
             60 + $yPositionOffset,
-            $packetAttributes->getName() . ' ' . $packetAttributes->getSurname()
+            false,
+            0,
+            false,
+            true,
+            7,
+            'T',
+            true
         );
+
+//        $pdf->Text(
+//            73 + $xPositionOffset,
+//            60 + $yPositionOffset,
+//            $packetAttributes->getName() . ' ' . $packetAttributes->getSurname()
+//        );
 
         $pdf->SetFillColor(0, 0, 0);
         $pdf->SetTextColor(255, 255, 255);
