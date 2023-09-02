@@ -69,7 +69,7 @@ final class ZasilkovnaBranch implements IBranch
     {
         $this->id = (int) $data['id'];
         $this->name = $data['name'];
-        $this->nameStreet = $data['nameStreet'];
+        $this->nameStreet = $data['nameStreet'] ?? '';
         $this->place = $data['place'];
         $this->street = $data['street'];
         $this->city = $data['city'];
