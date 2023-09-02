@@ -26,11 +26,11 @@ final class ZasilkovnaBranch implements IBranch
 
     private string $currency;
 
-    private ?string $directions;
+    private  $directions;
 
-    private ?string $directionsCar;
+    private  $directionsCar;
 
-    private ?string $directionsPublic;
+    private  $directionsPublic;
 
     private bool $wheelchairAccessible;
 
@@ -61,7 +61,6 @@ final class ZasilkovnaBranch implements IBranch
 
     private BranchOpeningHours $openingHours;
 
-
     /**
      * @param mixed[] $data
      */
@@ -69,7 +68,7 @@ final class ZasilkovnaBranch implements IBranch
     {
         $this->id = (int) $data['id'];
         $this->name = $data['name'];
-        $this->nameStreet = $data['nameStreet'] ?? '';
+        $this->nameStreet = $data['special'] ?? '';
         $this->place = $data['place'];
         $this->street = $data['street'];
         $this->city = $data['city'];
@@ -202,10 +201,10 @@ final class ZasilkovnaBranch implements IBranch
         $fromLonRad = deg2rad($longitude);
 
         return acos(
-            cos($thisLatRad) * cos($thisLonRad) * cos($fromLatRad) * cos($fromLonRad)
+                cos($thisLatRad) * cos($thisLonRad) * cos($fromLatRad) * cos($fromLonRad)
                 + cos($thisLatRad) * sin($thisLonRad) * cos($fromLatRad) * sin($fromLonRad)
                 + sin($thisLatRad) * sin($fromLatRad)
-        ) * $greatCircleRadius;
+            ) * $greatCircleRadius;
     }
 
 
