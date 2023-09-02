@@ -40,11 +40,11 @@ final class Branch
             if (!($result = file_get_contents($this->jsonEndpoint))) {
                 throw new \RuntimeException('Failed to open JSON endpoint');
             }
-            if (!($data = \json_decode($result, true)) || !array_key_exists('data', $data)) {
+            if (!($data = \json_decode($result, true))) {
                 throw new \RuntimeException('Failed to decode JSON');
             }
 
-            $this->branchStorage->setBranchList($data['data']);
+            $this->branchStorage->setBranchList($data);
         }
         $this->initialized = true;
     }
